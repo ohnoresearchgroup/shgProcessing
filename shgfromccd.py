@@ -76,5 +76,9 @@ class SHGfromCCD():
                 plt.title("Frame " + str(i))
 
     def plotIntensities(self):
+        plt.figure()
         plt.plot(self.time,self.intensities)
         plt.xlabel('Time')
+
+    def getMean(self):
+        return (np.mean(self.intensities),np.std(self.intensities))
